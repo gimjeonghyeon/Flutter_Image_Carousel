@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // 상태바 색상을 변경하기 위한 코드 (SystemUiOverlayStyle.dark 로 하면 검정색으로 설정 됨)
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return Scaffold(
       body: PageView( // PageView 추가
         children: [1, 2, 3, 4, 5, 6] // 샘플 리스트 생성
