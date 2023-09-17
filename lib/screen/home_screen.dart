@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class HomeScreen extends StatelessWidget {
+// StatefulWidget 정의
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<StatefulWidget> createState() => _HomeScreenState();
+}
+
+// HomeScreen의 State 정의
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     // 상태바 색상을 변경하기 위한 코드 (SystemUiOverlayStyle.dark 로 하면 검정색으로 설정 됨)
@@ -21,5 +28,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
 }
